@@ -114,7 +114,7 @@ nav ul li a:hover {
 
 
 /* ========================================= */
-/* 3.  GENEL BİLEŞENLER                      */
+/* 3. HAMBURGER MENU                         */
 /* ========================================= */
 /* css/style.css dosyasına eklenecek yeni kodlar */
 /* header stillerinin altına ekleyin */
@@ -266,7 +266,7 @@ nav ul li a:hover {
 .hakkimizda-metin p {
     font-size: 16px;
     line-height: 1.7; /* Satır yüksekliği, metnin daha okunaklı olmasını sağlar */
-    color: #00114b;
+    color: #555;
 }
 /* css/style.css dosyasına eklenecek yeni kodlar */
 
