@@ -713,6 +713,10 @@ header nav.mobil-menu-aktif ul li a {
     .bolum-basligi { font-size: 32px; }
     .hakkimizda-metin h3 { font-size: 28px; }
 
+    .misyon-vizyon {
+        flex-direction: column;
+    }
+
     /* Proje kartlarını mobilde tek sütun yap */
     .proje-karti {
         flex-basis: 90%; /* Neredeyse tam genişlik */
