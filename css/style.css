@@ -55,6 +55,8 @@ header {
     padding: 20px 0; /* Üstten ve alttan 20px boşluk */  
     border-bottom: 1px solid #eee; /* Altına ince bir çizgi */
     box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Hafif bir gölge efekti */
+    position: relative; /* Konumlandırma bağlamı oluşturur */
+    z-index: 1000;      /* Header'ı diğer tüm elementlerin üzerine çıkarır */
 }
 
 header .container {
@@ -120,7 +122,7 @@ nav ul li a:hover {
     display: none; /* Masaüstünde gizli olsun */
     font-size: 28px;
     cursor: pointer;
-    color: #061e37;
+    color: #952626;
 }
 
 
@@ -724,5 +726,6 @@ header nav.mobil-menu-aktif ul li a {
     .hamburger-menu {
         display: block; /* Hamburger ikonunu göster */
     }
+
 }
 
