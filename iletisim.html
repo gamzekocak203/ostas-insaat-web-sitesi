@@ -4,10 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>İletişim - İnşaat Firması</title>
+    <meta name="description" content="Proje ve hizmetlerimiz hakkında bilgi almak için [Ostaş İnşaat] ile iletişime geçin.">
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
     <link rel="manifest" href="site.webmanifest">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -30,21 +32,21 @@
     <main>
     <section class="sayfa-basligi">
         <div class="container">
-            <h1>İLETİŞİM</h1>
+            <h1 data-aos="fade-down" data-aos-duration="1000">İLETİŞİM</h1>
         </div>
     </section>
     <section class="iletisim-sayfasi">
     <div class="container">
         <div class="iletisim-icerik">
-            <div class="iletisim-sol">
+            <div class="iletisim-sol" data-aos="fade-right" data-aos-duration="800">
                 <h2>İletişim Bilgileri</h2>
                 <ul class="bilgi-listesi">
-                    <li><strong>Adres:</strong> Zincirlikuyu Mah. Asmalı Sk. No:1/A Darıca/Kocaeli</li>
-                    <li><strong><a href="tel:+902620000000">Telefon:</a></strong> 0262 745 77 07</li>
-                    <li><strong><a href="mailto:info@insaatas.com.tr">Email:</a></strong> ostasinsaat@gmail.com</li>
+                    <li data-aos="fade-right" data-aos-delay="200"></li><strong>Adres:</strong> Zincirlikuyu Mah. Asmalı Sk. No:1/A Darıca/Kocaeli</li>
+                    <li data-aos="fade-right" data-aos-delay="300"><strong><a href="tel:0262 745 77 07">Telefon:</a></strong> 0262 745 77 07</li>
+                    <li data-aos="fade-right" data-aos-delay="400"><strong><a href="mailto:ostasinsaat@gmail.com.tr">Email:</a></strong> ostasinsaat@gmail.com</li>
                 </ul>
 
-                <h2 style="margin-top: 40px;">BİZE ULAŞIN</h2>
+                <h2 style="margin-top: 40px;" data-aos="fade-right" data-aos-delay="100">BİZE ULAŞIN</h2>
                 <form class="iletisim-formu">
                     <input type="text" name="adsoyad" placeholder="Adınız Soyadınız" required>
                     <input type="email" name="email" placeholder="E-posta Adresiniz" required>
@@ -54,7 +56,7 @@
                 </form>
             </div>
 
-            <div class="iletisim-sag">
+            <div class="iletisim-sag" data-aos="fade-left" data-aos-duration="800">
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d377.7701780451133!2d29.385940883130647!3d40.758474187229844!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cae06efd8fea1d%3A0x2cdc4a95324a73ee!2sZincirlikuyu%2C%20Asmal%C4%B1%20Sk.%2C%2041700%20Dar%C4%B1ca%2FKocaeli!5e0!3m2!1str!2str!4v1753700210463!5m2!1str!2str" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></iframe>
             </div>
         </div>
@@ -98,7 +100,8 @@
      </footer>
 
     <a href="#" id="scrollTopBtn" title="Yukarı Çık">&#9650;</a>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="js/script.js"></script>
-
+    <script>AOS.init();</script>
 </body>
 </html>

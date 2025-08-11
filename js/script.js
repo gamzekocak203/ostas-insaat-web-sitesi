@@ -7,13 +7,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const navMenu = document.querySelector('header nav');
 
     // 2. Hamburger ikonunun ve menünün var olup olmadığını kontrol edelim.
-    if (hamburger && navMenu) {
-        // 3. Hamburger ikonuna bir 'click' (tıklama) olayı dinleyicisi ekleyelim.
-        hamburger.addEventListener('click', () => {
-            // 4. Her tıklandığında, nav elementine 'mobil-menu-aktif' class'ını ekleyip kaldıralım.
-            navMenu.classList.toggle('mobil-menu-aktif');
-        });
-    }
+if (hamburger && navMenu) {
+    // 3. Hamburger ikonuna bir 'click' (tıklama) olayı dinleyicisi ekleyelim.
+    hamburger.addEventListener('click', () => {
+        // 4. Her tıklandığında, nav elementine 'mobil-menu-aktif' class'ını ekleyip kaldıralım.
+        navMenu.classList.toggle('mobil-menu-aktif');
+     });
+}
 
     // js/script.js dosyasının içine, mobil menü kodundan sonra
 
@@ -44,5 +44,9 @@ if (scrollTopBtn) {
         });
     });
 }
+AOS.init({
+        duration: 800, // Animasyonların süresi (milisaniye)
+        once: true      // Animasyonların sadece bir kere çalışmasını sağla
+    });
 
 });

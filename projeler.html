@@ -4,10 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projelerimiz - İnşaat Firması</title>
+    <meta name="description" content="[Ostaş İnşaat] olarak 25 yıllık tecrübemizle, [İnşaat] sektöründe lider projeler geliştiriyoruz. Kalite ve güvenden ödün vermeyen anahtar teslim çözümlerimizle tanışın.">
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
     <link rel="manifest" href="site.webmanifest">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -30,55 +32,55 @@
     <main>
     <section class="sayfa-basligi">
         <div class="container">
-        <h1>PROJELER</h1>
+        <h1 data-aos="fade-down" data-aos-duration="1000">PROJELER</h1>
         </div>
     </section>
 
     <section class="proje-galerisi">
     <div class="container">
         <div class="projeler-grid">
-            <article class="proje-karti">
-                <img src="images/proje-1.webp" alt="Modern Villa Projesi" loading="lazy" decoding="async">
+            <article class="proje-karti" data-aos="fade-up" data-aos-duration="600" data-aos-delay="100">
+                <img src="images/proje-1.webp" alt="Huzur ve Konforun Buluştuğu Yaşam Alanı" loading="lazy" decoding="async">
                 <div class="kart-icerik">
                     <h3>Huzur ve Konforun Buluştuğu Yaşam Alanı</h3>
                     <p>Geniş ve ferah yaşam alanlarımızla, sevdiklerinizle birlikte huzurlu bir yuvaya adım atın.</p>
                 </div>
             </article>
 
-            <article class="proje-karti">
-                <img src="images/proje-2.webp" alt="İş Merkezi Projesi" loading="lazy" decoding="async">
+            <article class="proje-karti" data-aos="fade-up" data-aos-duration="600" data-aos-delay="200">
+                <img src="images/proje-2.webp" alt="Huzur ve Konforun Buluştuğu Yaşam Alanı" loading="lazy" decoding="async">
                 <div class="kart-icerik">
                     <h3>Lüks Konut Projesi</h3>
                     <p>Şehrin merkezinde, modern mimari ve konforu bir araya getiren prestijli yaşam alanı.</p>
                 </div>
             </article>
 
-            <article class="proje-karti">
-                <img src="images/proje-3.webp" alt="Alışveriş Merkezi Projesi" loading="lazy" decoding="async">
+            <article class="proje-karti" data-aos="fade-up" data-aos-duration="600" data-aos-delay="300">
+                <img src="images/proje-3.webp" alt="Yaşamda Yeni Bir Dönem" loading="lazy" decoding="async">
                 <div class="kart-icerik">
                     <h3>Yaşamda Yeni Bir Dönem</h3>
                     <p>Ferah iç mekanlar ve aydınlık yaşam alanlarıyla her güne huzurla başlayın.</p>
                 </div>
             </article>
 
-            <article class="proje-karti">
-                <img src="images/proje-4.webp" alt="Endüstriyel Tesis" loading="lazy" decoding="async">
+            <article class="proje-karti" data-aos="fade-up" data-aos-duration="600" data-aos-delay="400">
+                <img src="images/proje-4.webp" alt="Günlük Hayata Uyumlu Yapılar" loading="lazy" decoding="async">
                 <div class="kart-icerik">
                     <h3> Günlük Hayata Uyumlu Yapılar</h3>
                     <p>Temiz çizgiler, doğal ışık ve pratik çözümlerle eviniz hem işlevsel hem de yaşanabilir olur.</p>
                 </div>
             </article>
 
-            <article class="proje-karti">
-                <img src="images/proje-5.webp" alt="Kültür Merkezi" loading="lazy" decoding="async">
+            <article class="proje-karti" data-aos="fade-up" data-aos-duration="600" data-aos-delay="500">
+                <img src="images/proje-5.webp" alt="Sade, Şık ve Size Özel" loading="lazy" decoding="async">
                 <div class="kart-icerik">
                     <h3> Sade, Şık ve Size Özel</h3>
                     <p>Estetikten ödün vermeden tasarlanmış alanlarda, her günü keyifle karşılayın.</p>
                 </div>
             </article>
 
-            <article class="proje-karti">
-                <img src="images/proje-6.webp" alt="Rezidans Projesi" loading="lazy" decoding="async">
+            <article class="proje-karti" data-aos="fade-up" data-aos-duration="600" data-aos-delay="600">
+                <img src="images/proje-6.webp" alt="Yaşanabilir Mekanlar, Gerçek Konfor" loading="lazy" decoding="async">
                 <div class="kart-icerik">
                     <h3>Yaşanabilir Mekanlar, Gerçek Konfor</h3>
                     <p>Günlük ihtiyaçlarınıza uyum sağlayan ferah yapılarla huzurlu bir yaşam sizi bekliyor.</p>
@@ -126,7 +128,8 @@
      </footer>
 
     <a href="#" id="scrollTopBtn" title="Yukarı Çık">&#9650;</a>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="js/script.js"></script>
-
+    <script>AOS.init();</script>
 </body>
 </html>

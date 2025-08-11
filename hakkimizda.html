@@ -4,10 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>İnşaat Firması - Ana Sayfa</title>
+    <meta name="description" content="Firmamızın 25 yıllık köklü geçmişi, misyonu ve vizyonu hakkında daha fazla bilgi edinin. Kalite ve güven üzerine kurulu değerlerimizi keşfedin.">
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
     <link rel="manifest" href="site.webmanifest">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -30,29 +32,29 @@
     <main>
     <section class="sayfa-basligi">
         <div class="container">
-            <h1>HAKKIMIZDA</h1>
+            <h1 data-aos="fade-down" data-aos-duration="1000">HAKKIMIZDA</h1>
         </div>
     </section>
     <section class="hakkimizda-detay">
     <div class="container">
         <div class="hakkimizda-icerik" style="margin-bottom: 60px;">
-            <div class="hakkimizda-resim">
-                <img src="images/hakkimizda-resim.webp" alt="Şirketimizden bir görünüm" loading="lazy" decoding="async">
+            <div class="hakkimizda-resim" data-aos="fade-right" data-aos-duration="700">
+                <img src="images/hakkimizda-resim.webp" alt="İnşaat Projesi Yapan Ekip" loading="lazy" decoding="async">
             </div>
-            <div class="hakkimizda-metin">
-                <h2>Tarihçemiz</h2>
-                <h3>2010'dan Bugüne, Aynı Özenle</h3>
-                <p>Firmamız, 2010 yılında kurulmuş olup, o günden bu yana inşaat alanında güvenilir ve titiz çalışmalarıyla hizmet vermektedir. Kuruluşumuzdan itibaren kaliteye, sağlamlığa ve müşteri memnuniyetine önem vererek projelerimizi hayata geçirdik. Her işe aynı özenle yaklaşarak, zaman içinde farklı ihtiyaçlara yönelik yapılar inşa ettik. Deneyimimiz, işimize duyduğumuz saygı ve detaylara verdiğimiz önemle şekillenmektedir.</p>
-                <p>Bugün de ilk günkü yaklaşımımızı koruyarak, sorumluluk bilinciyle çalışmaya devam ediyoruz.</p>
+            <div class="hakkimizda-metin" data-aos="fade-left" data-aos-duration="700">
+                <h2 data-aos="fade-left" data-aos-delay="100" data-aos-duration="500">Tarihçemiz</h2>
+                <h3 data-aos="fade-left" data-aos-delay="200" data-aos-duration="500">2010'dan Bugüne, Aynı Özenle</h3>
+                <p data-aos="fade-left" data-aos-delay="300" data-aos-duration="500">Firmamız, 2010 yılında kurulmuş olup, o günden bu yana inşaat alanında güvenilir ve titiz çalışmalarıyla hizmet vermektedir. Kuruluşumuzdan itibaren kaliteye, sağlamlığa ve müşteri memnuniyetine önem vererek projelerimizi hayata geçirdik. Her işe aynı özenle yaklaşarak, zaman içinde farklı ihtiyaçlara yönelik yapılar inşa ettik. Deneyimimiz, işimize duyduğumuz saygı ve detaylara verdiğimiz önemle şekillenmektedir.</p>
+                <p data-aos="fade-left" data-aos-delay="300" data-aos-duration="500">Bugün de ilk günkü yaklaşımımızı koruyarak, sorumluluk bilinciyle çalışmaya devam ediyoruz.</p>
             </div>
         </div>
 
         <div class="misyon-vizyon">
-            <div class="misyon">
+            <div class="misyon" data-aos="zoom-in-up" data-aos-duration="700">
                 <h3>Misyonumuz</h3>
                 <p>Müşterilerimize güvenilir, dayanıklı ve işlevsel yapılar sunmak. Her projede özenli bir çalışma anlayışıyla hareket ederek, yaşam alanlarını ihtiyaçlara uygun şekilde inşa etmek.</p>
             </div>
-            <div class="vizyon">
+            <div class="vizyon" data-aos="zoom-in-up" data-aos-delay="200" data-aos-duration="700">
                 <h3>Vizyonumuz</h3>
                 <p>İnşaat alanında dürüstlük, kalite ve sadelikten ödün vermeden hizmet vermek. Uzmanlık alanlarımızda istikrarlı bir şekilde yol alarak tercih edilen ve güvenilen bir firma olmaya devam etmek.</p>
             </div>
@@ -97,7 +99,8 @@
      </footer>
 
     <a href="#" id="scrollTopBtn" title="Yukarı Çık">&#9650;</a>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="js/script.js"></script>
-
+    <script>AOS.init();</script>
 </body>
 </html>

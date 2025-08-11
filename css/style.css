@@ -3,7 +3,7 @@
 /*
 İÇİNDEKİLER
 -----------
-1.  GENEL AYARLAR 
+1.  AYARLAR 
 2.  HEADER VE NAVİGASYON
 3.  HAMBURGER MENU
 4.  ANA SAYFA BÖLÜMLERİ
@@ -12,7 +12,7 @@
     4.3 Hakkımızda Bölümü
     4.4 Projeler Bölümü
 5.  FOOTER (ALT BİLGİ)
-6.  GENEL SAYFA
+6.  GENEL SAYFA AYARLARI
     6.1 Hakkımızda
     6.2 Projeler
     6.3 İletişim
@@ -25,13 +25,13 @@
 
 
 /* ========================================= */
-/* 1.  GENEL AYARLAR                         */
+/* 1.AYARLAR                                 */
 /* ========================================= */
 body {
     font-family: Arial, sans-serif; /* Okunabilir bir font belirleyelim */
     margin: 0; /* Sayfanın kenarlarındaki varsayılan boşluğu kaldıralım */
     padding: 0;
-    color: #333; /* Genel metin rengi */
+    color: #222; /* Genel metin rengi */
 }
 
 .container {
@@ -455,7 +455,7 @@ footer {
 
 
 /* ========================================= */
-/* 6 GENEL SAYFA                             */
+/* 6 GENEL SAYFA AYARLARI                    */
 /* ========================================= */
 /* css/style.css dosyasına eklenecek yeni kodlar */
 /* Genel Sayfa Başlığı Alanı */
@@ -524,6 +524,15 @@ footer {
     padding: 80px 0;
     background-color: #f9f9f9;
 }
+
+
+
+
+
+
+/* ========================================= */
+/* 6.2 İLETİŞİM                              */
+/* ========================================= */
 /* İletişim Sayfası */
 .iletisim-sayfasi {
     padding: 80px 0;
@@ -545,7 +554,7 @@ footer {
     font-size: 16px;
 }
 .bilgi-listesi a {
-    color: #00114b;
+    color: #000000;
     text-decoration: none;
     font-weight: normal;
     transition: color 0.3s ease;
@@ -554,16 +563,6 @@ footer {
     color: #900000;
 }
 
-
-
-
-
-
-
-
-/* ========================================= */
-/* 6.2 İLETİŞİM                              */
-/* ========================================= */
 /* İletişim Formu */
 .iletisim-formu input,
 .iletisim-formu textarea {

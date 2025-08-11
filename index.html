@@ -4,10 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>İnşaat Firması - Ana Sayfa</title>
+    <meta name="description" content="[Ostaş İnşaat], 25 yıllık tecrübesiyle Kocaeli ve çevresinde: proje çizimi, müteahhitlik hizmeti, kat karşılığı ve anahtar teslimi inşaat, zemin çalışmaları hizmetleri vermekteyiz."> 
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
     <link rel="manifest" href="site.webmanifest">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -30,18 +32,18 @@
     <main>
         <section class="hero">
             <div class="hero-content">
-                <h1>Kaliteli ve Uzman İnşaat Projeleri</h1>
-                <p>Geleceğin Yapılarını Birlikte İnşa Ediyoruz</p>
-                <a href="projeler.html" class="cta-button">Projelerimizi İnceleyin</a>
+                <h1 data-aos="fade-down">Kaliteli ve Uzman İnşaat Projeleri</h1>
+                <p data-aos="fade-down" data-aos-delay="200">Geleceğin Yapılarını Birlikte İnşa Ediyoruz</p>
+                <a href="projeler.html" class="cta-button" data-aos="fade-up" data-aos-delay="400">Projelerimizi İnceleyin</a>
             </div>
         </section>
         <section class="hakkimizda">
             <div class="container">
                 <div class="hakkimizda-icerik">
-                    <div class="hakkimizda-resim">
-                        <img src="images/hakkimizda-resim.webp" alt="İnşaat Projesi Planı Yapan Ekip" loading="lazy" decoding="async">
+                    <div class="hakkimizda-resim" data-aos="fade-right">
+                        <img src="images/hakkimizda-resim.webp" alt="İnşaat Projesi Yapan Ekip" loading="lazy" decoding="async">
                     </div>
-                    <div class="hakkimizda-metin">
+                    <div class="hakkimizda-metin" data-aos="fade-left">
                         <h2>Biz Kimiz?</h2>
                         <h3>25 Yıllık Tecrübe ile Geleceği İnşa Ediyoruz</h3>
                         <p>Firmamız, 2010 yılında kurulmuş olup, kurulduğu günden bu yana kalite, güven ve müşteri memnuniyetini ilke edinmiştir.</p>
@@ -52,10 +54,10 @@
         </section>
         <section class="one-cikan-projeler">
             <div class="container">
-                <h2 class="bolum-basligi">Öne Çıkan Projelerimiz</h2>
+                <h2 class="bolum-basligi" data-aos="fade-up">Öne Çıkan Projelerimiz</h2>
                 <div class="projeler-grid">
-                    <article class="proje-karti">
-                        <img src="images/proje-1.webp" alt="Modern Villa Projesi" loading="lazy" decoding="async">
+                    <article class="proje-karti" data-aos="fade-up" data-aos-delay="100">
+                        <img src="images/proje-1.webp" alt="Huzur ve Konforun Buluştuğu Yaşam Alanı" loading="lazy" decoding="async">
                         <div class="kart-icerik">
                             <h3>Huzur ve Konforun Buluştuğu Yaşam Alanı</h3>
                             <p>Geniş ve ferah yaşam alanlarımızla, sevdiklerinizle birlikte huzurlu bir yuvaya adım atın.</p>
@@ -63,8 +65,8 @@
                         </div>
                     </article>
 
-                    <article class="proje-karti">
-                        <img src="images/proje-2.webp" alt="İş Merkezi Projesi" loading="lazy" decoding="async">
+                    <article class="proje-karti" data-aos="fade-up" data-aos-delay="100">
+                        <img src="images/proje-2.webp" alt="Lüks Konut Projesi" loading="lazy" decoding="async">
                         <div class="kart-icerik">
                             <h3>Lüks Konut Projesi</h3>
                             <p>Şehrin merkezinde, modern mimari ve konforu bir araya getiren prestijli yaşam alanı.</p>
@@ -72,8 +74,8 @@
                         </div>
                     </article>
 
-                    <article class="proje-karti">
-                        <img src="images/proje-3.webp" alt="Alışveriş Merkezi Projesi" loading="lazy" decoding="async">
+                    <article class="proje-karti" data-aos="fade-up" data-aos-delay="100">
+                        <img src="images/proje-3.webp" alt="Yaşamda Yeni Bir Dönem" loading="lazy" decoding="async">
                         <div class="kart-icerik">
                             <h3>Yaşamda Yeni Bir Dönem</h3>
                             <p>Ferah iç mekanlar ve aydınlık yaşam alanlarıyla her güne huzurla başlayın.</p>
@@ -120,6 +122,8 @@
      </footer>
 
     <a href="#" id="scrollTopBtn" title="Yukarı Çık">&#9650;</a>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="js/script.js"></script>
+    <script>AOS.init();</script>
 </body>
 </html>
