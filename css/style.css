@@ -547,7 +547,7 @@ footer {
     flex: 1; /* İki sütun da eşit genişlikte olsun */
 }
 
-.bilgi-listesi {
+.bilgi-listesi li strong {
     list-style: none;
     padding: 0;
     line-height: 2; /* Satır aralarını açalım */
@@ -556,7 +556,7 @@ footer {
 .bilgi-listesi a {
     color: #000000;
     text-decoration: none;
-    font-weight: normal;
+    font-weight: bold;
     transition: color 0.3s ease;
 }
 .bilgi-listesi a:hover {
