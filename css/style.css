@@ -27,11 +27,44 @@
 /* ========================================= */
 /* 1.AYARLAR                                 */
 /* ========================================= */
+:root {
+  
+  --renk-ana-kirmizi: #ba0000;
+  --renk-koyu-kirmizi: #900000;
+  --renk-ana-mavi: #00114b;
+  --renk-beyaz: #ffffff;
+  --renk-siyah: #000000;
+
+  --renk-metin-ana: #222;
+  --renk-metin-ikincil: #555;
+  --renk-metin-footer-acik: #e0e0e0;
+  --renk-metin-footer: #f2f2f2;
+  --renk-metin-copyright: #d1adad;
+
+  --renk-arkaplan-acik-gri: #f9f9f9;
+  --renk-arkaplan-sayfa-basligi: #f4f4f4;
+  
+  --renk-kenarlik-ince: #eee;
+  --renk-kenarlik-normal: #ddd;
+  --renk-kenarlik-form: #ccc;
+
+  --golge-hafif: rgba(0, 0, 0, 0.1);
+  --golge-belirgin: rgba(0, 0, 0, 0.15);
+  --katman-hero: rgba(0, 0, 0, 0.5);
+  --arkaplan-mobil-menu: rgba(255, 255, 255, 0.98);
+}
+
+
+
+
+
+
+
 body {
     font-family: Arial, sans-serif; /* Okunabilir bir font belirleyelim */
     margin: 0; /* Sayfanın kenarlarındaki varsayılan boşluğu kaldıralım */
     padding: 0;
-    color: #222; /* Genel metin rengi */
+    color: var(--renk-metin-ana); /* Genel metin rengi */
 }
 
 .container {
@@ -51,10 +84,10 @@ body {
 /* 2.  HEADER VE NAVİGASYON                  */
 /* ========================================= */
 header {
-    background-color: #ffffff; /* Beyaz arkaplan */
+    background-color: var(--renk-beyaz); /* Beyaz arkaplan */
     padding: 20px 0; /* Üstten ve alttan 20px boşluk */  
-    border-bottom: 1px solid #eee; /* Altına ince bir çizgi */
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Hafif bir gölge efekti */
+    border-bottom: 1px solid var(--renk-kenarlik-ince); /* Altına ince bir çizgi */
+    box-shadow: 0 2px 5px var(--golge-hafif); /* Hafif bir gölge efekti */
     position: relative; /* Konumlandırma bağlamı oluşturur */
     z-index: 1000;      /* Header'ı diğer tüm elementlerin üzerine çıkarır */
 }
@@ -68,7 +101,7 @@ header .container {
 .logo {
     font-size: 36px; /* Logo yazısının boyutu */
     font-weight: bold; /* Kalın yazı */
-    color: #ba0000; /* Kırmızı bir renk */
+    color: var(--renk-ana-kirmizi); /* Kırmızı bir renk */
     text-decoration: none; /* Linkin altındaki çizgiyi kaldır */
     transition: color 0.3s ease;
 
@@ -76,7 +109,7 @@ header .container {
 }
 
 .logo:hover {
-    color: #900000; /* Örnek bir hover efekti ekleyelim */
+    color: var(--renk-koyu-kirmizi); /* Örnek bir hover efekti ekleyelim */
 }
 
 
@@ -94,7 +127,7 @@ nav ul li {
 
 nav ul li a {
     text-decoration: none; /* Linklerin altındaki çizgiyi kaldır */
-    color: #00114b; /* Metin rengi */
+    color: var(--renk-ana-mavi); /* Metin rengi */
     font-weight: 600; /* Biraz daha kalın yazı */
     font-size: 16px;
     padding: 5px 0; /* Tıklama alanını biraz büyütelim */
@@ -102,7 +135,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: #900000; /* Fare üzerine gelince renk kırmızıya dönsün */
+    color: var(--renk-koyu-kirmizi); /* Fare üzerine gelince renk kırmızıya dönsün */
 }
 
 
@@ -122,7 +155,7 @@ nav ul li a:hover {
     display: none; /* Masaüstünde gizli olsun */
     font-size: 28px;
     cursor: pointer;
-    color: #ba0000;
+    color: var(--renk-ana-kirmizi);
 }
 
 
@@ -142,7 +175,7 @@ nav ul li a:hover {
     background-size: cover; /* Resmi alana sığdır, taşan kısımları kes */
     background-position: center; /* Resmi ortala */
     height: 85vh; /* Ekran yüksekliğinin %85'i kadar olsun */
-    color: #fff; /* Üzerindeki tüm yazıların rengi beyaz olsun */
+    color: var(--renk-beyaz); /* Üzerindeki tüm yazıların rengi beyaz olsun */
 
     /* İçeriği (hero-content) dikey ve yatayda ortalamak için Flexbox kullanıyoruz */
     display: flex;
@@ -160,7 +193,7 @@ nav ul li a:hover {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Siyah, %50 şeffaf */
+    background-color: var(--katman-hero); /* Siyah, %50 şeffaf */
 }
 
 /* İçerik katmanının gölgenin üstünde kalmasını sağlıyoruz */
@@ -195,8 +228,8 @@ nav ul li a:hover {
 /* ========================================= */
 /* Eylem Çağrısı Butonu (CTA) */
 .cta-button {
-    background-color: #ba0000; /* kırmızı arkaplan */
-    color: #fff; /* Beyaz metin */
+    background-color: var(--renk-ana-kirmizi); /* kırmızı arkaplan */
+    color: var(--renk-beyaz); /* Beyaz metin */
     padding: 15px 30px; /* Butonun iç boşlukları */
     text-decoration: none; /* Link alt çizgisini kaldır */
     font-weight: bold; /* Kalın yazı */
@@ -205,7 +238,7 @@ nav ul li a:hover {
 }
 
 .cta-button:hover {
-    background-color: #900000; /* Fare üzerine gelince biraz daha koyu kırmızı */
+    background-color: var(--renk-koyu-kirmizi); /* Fare üzerine gelince biraz daha koyu kırmızı */
 }
 /* css/style.css dosyasına eklenecek yeni kodlar */
 
@@ -225,7 +258,7 @@ nav ul li a:hover {
 /* Hakkımızda Bölümü */
 .hakkimizda {
     padding: 30px 0; /* Bölümün üstünden ve altından boşluk */
-    background-color: #f9f9f9; /* Çok hafif bir gri arkaplan rengi */
+    background-color: var(--renk-arkaplan-acik-gri); /* Çok hafif bir gri arkaplan rengi */
 }
 
 .hakkimizda-icerik {
@@ -241,7 +274,7 @@ nav ul li a:hover {
 .hakkimizda-resim img {
     width: 100%; /* Resim, kendi kapsayıcısının %100'ünü kaplasın */
     border-radius: 8px; /* Resmin köşelerini hafifçe yuvarlat */
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1); /* Resme derinlik katmak için gölge */
+    box-shadow: 0 4px 15px var(--golge-hafif); /* Resme derinlik katmak için gölge */
 }
 
 .hakkimizda-metin {
@@ -250,7 +283,7 @@ nav ul li a:hover {
 
 .hakkimizda-metin h2 {
     font-size: 32px;
-    color: #ba0000; /* kırmızı renk ile tema bütünlüğü */
+    color: var(--renk-ana-kirmizi); /* kırmızı renk ile tema bütünlüğü */
     text-transform: uppercase; /* BÜYÜK HARFLERLE YAZ */
     letter-spacing: 1px; /* Harfler arasına boşluk */
     margin-bottom: 10px;
@@ -258,7 +291,7 @@ nav ul li a:hover {
 
 .hakkimizda-metin h3 {
     font-size: 36px;
-    color: #00114b;
+    color: var(--renk-ana-mavi);
     margin-top: 0;
     margin-bottom: 20px;
 }
@@ -266,7 +299,7 @@ nav ul li a:hover {
 .hakkimizda-metin p {
     font-size: 16px;
     line-height: 1.7; /* Satır yüksekliği, metnin daha okunaklı olmasını sağlar */
-    color: #555;
+    color: var(--renk-metin-ikincil);
 }
 /* css/style.css dosyasına eklenecek yeni kodlar */
 
@@ -274,7 +307,7 @@ nav ul li a:hover {
 .bolum-basligi {
     text-align: center;
     font-size: 38px;
-    color: #ba0000;
+    color: var(--renk-ana-kirmizi);
     margin-bottom: 50px;
 }
 
@@ -292,7 +325,7 @@ nav ul li a:hover {
 /* Öne Çıkan Projeler Bölümü */
 .one-cikan-projeler {
     padding: 80px 0;
-    background-color: #fff; /* Arka plan bu sefer beyaz kalsın */
+    background-color: var(--renk-beyaz); /* Arka plan bu sefer beyaz kalsın */
 }
 
 .projeler-grid {
@@ -302,9 +335,9 @@ nav ul li a:hover {
 }
 
 .proje-karti {
-    background-color: #fff;
+    background-color: var(--renk-beyaz);
     border-radius: 8px; /* Kart köşelerini yuvarlat */
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 15px var(--golge-hafif);
     overflow: hidden; /* Taşan kısımları (resmin köşeleri) gizle */
     flex-basis: calc(33.333% - 20px); /* Üç sütunlu yapı için temel genişlik ayarı */
     display: flex;
@@ -314,7 +347,7 @@ nav ul li a:hover {
 
 .proje-karti:hover {
     transform: translateY(-10px); /* Fare üzerine gelince kart yukarı kaysın */
-    box-shadow: 0 8px 25px rgba(0,0,0,0.15); /* Gölgeyi belirginleştir */
+    box-shadow: 0 8px 25px var(--golge-belirgin); /* Gölgeyi belirginleştir */
 }
 .proje-karti:hover img {
     transform: scale(1.05); /* Resmi %5 büyüt */
@@ -336,7 +369,7 @@ nav ul li a:hover {
 
 .kart-icerik h3 {
     font-size: 22px;
-    color: #00114b;
+    color: var(--renk-ana-mavi);
     margin-top: 0;
     margin-bottom: 15px;
 }
@@ -344,7 +377,7 @@ nav ul li a:hover {
 .kart-icerik p {
     font-size: 15px;
     line-height: 1.6;
-    color: #555;
+    color: var(--renk-metin-ikincil);
     flex-grow: 1; /* Paragrafın mevcut alanı doldurmasını sağlar, butonları hizalar */
     margin-bottom: 20px;
 }
@@ -352,9 +385,9 @@ nav ul li a:hover {
 .kart-buton {
     display: inline-block;
     background-color: transparent;
-    color: #ba0000;
+    color: var(--renk-ana-kirmizi);
     padding: 10px 20px;
-    border: 2px solid #ba0000;
+    border: 2px solid var(--renk-ana-kirmizi);
     border-radius: 5px;
     text-decoration: none;
     font-weight: bold;
@@ -364,8 +397,8 @@ nav ul li a:hover {
 }
 
 .kart-buton:hover {
-    background-color: #ba0000;
-    color: #fff;
+    background-color: var(--renk-ana-kirmizi);
+    color: var(--renk-beyaz);
 }
 /* css/style.css dosyasına eklenecek yeni kodlar */
 
@@ -383,8 +416,8 @@ nav ul li a:hover {
 /* ========================================= */
 /* Footer (Alt Bilgi) Alanı */
 footer {
-    background-color: #ba0000; /* Ana tema rengimiz (koyu kırmızı) */
-    color: #f2f2f2; /* Ana metinler için yumuşak bir beyaz tonu */
+    background-color: var(--renk-ana-kirmizi); /* Ana tema rengimiz (koyu kırmızı) */
+    color: var(--renk-metin-footer); /* Ana metinler için yumuşak bir beyaz tonu */
     padding: 60px 0 20px 0;
 }
 
@@ -403,14 +436,14 @@ footer {
     display: inline-block;
     font-size: 28px;
     font-weight: bold;
-    color: #ffffff; /* Logonun öne çıkması için saf beyaz */
+    color: var(--renk-beyaz); /* Logonun öne çıkması için saf beyaz */
     text-decoration: none;
     margin-bottom: 20px;
 }
 
 .footer-bolum h3 {
     font-size: 20px;
-    color: #ffffff; /* Başlıklar için saf beyaz */
+    color: var(--renk-beyaz); /* Başlıklar için saf beyaz */
     margin-bottom: 25px;
  /* border-bottom çizgisi kaldırıldı */
     padding-bottom: 10px;
@@ -418,7 +451,7 @@ footer {
 
 .footer-bolum p {
     line-height: 1.8;
-    color: #e0e0e0; /* paragraflar için biraz daha soluk bir beyaz */
+    color: var(--renk-metin-footer-acik); /* paragraflar için biraz daha soluk bir beyaz */
 }
 
 .footer-bolum ul {
@@ -431,13 +464,13 @@ footer {
 }
 
 .footer-bolum a {
-    color: #e0e0e0; /* Linkler için soluk beyaz */
+    color: var(--renk-metin-footer-acik); /* Linkler için soluk beyaz */
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
 .footer-bolum a:hover {
-    color: #00114b; /* Vurgu ve dikkat çekicilik için altın sarısı bir hover rengi */
+    color: var(--renk-ana-mavi); /* Vurgu ve dikkat çekicilik için altın sarısı bir hover rengi */
 }
 
 /* Footer'ın en altındaki telif hakkı kısmı */
@@ -445,7 +478,7 @@ footer {
     text-align: center;
     padding-top: 20px;
     font-size: 14px;
-    color: #d1adad; /* Telif hakkı yazısı için daha az dikkat çeken, kırmızıya dönük soluk bir renk */
+    color: var(--renk-metin-copyright); /* Telif hakkı yazısı için daha az dikkat çeken, kırmızıya dönük soluk bir renk */
 }
 
 
@@ -460,14 +493,14 @@ footer {
 /* css/style.css dosyasına eklenecek yeni kodlar */
 /* Genel Sayfa Başlığı Alanı */
 .sayfa-basligi {
-    background-color: #f4f4f4;
+    background-color: var(--renk-arkaplan-sayfa-basligi);
     padding: 40px 0;
     text-align: center;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid var(--renk-kenarlik-normal);
 }
 
 .sayfa-basligi h1 {
-    color: #ba0000;
+    color: var(--renk-ana-kirmizi);
     font-size: 42px;
     margin: 0;
 }
@@ -497,13 +530,13 @@ footer {
 
 .misyon, .vizyon {
     flex: 1;
-    background-color: #f9f9f9;
+    background-color: var(--renk-arkaplan-acik-gri);
     padding: 30px;
     border-radius: 8px;
 }
 
 .misyon-vizyon h3 {
-    color: #ba0000;
+    color: var(--renk-ana-kirmizi);
     font-size: 24px;
     margin-top: 0;
 }
@@ -522,7 +555,7 @@ footer {
 /* Proje Galerisi Sayfası */
 .proje-galerisi {
     padding: 80px 0;
-    background-color: #f9f9f9;
+    background-color: var(--renk-arkaplan-acik-gri);
 }
 
 
@@ -554,13 +587,13 @@ footer {
     font-size: 16px;
 }
 .bilgi-listesi a {
-    color: #000000;
+    color: var(--renk-siyah);
     text-decoration: none;
     font-weight: bold;
     transition: color 0.3s ease;
 }
 .bilgi-listesi a:hover {
-    color: #900000;
+    color: var(--renk-koyu-kirmizi);
 }
 
 /* İletişim Formu */
@@ -569,7 +602,7 @@ footer {
     width: 100%;
     padding: 12px;
     margin-bottom: 15px;
-    border: 1px solid #ccc;
+    border: 1px solid var(--renk-kenarlik-form);
     border-radius: 5px;
     font-size: 16px;
     box-sizing: border-box; /* Padding ve border'ın genişliğe dahil edilmesini sağlar */
@@ -608,12 +641,12 @@ footer {
     right: 30px;
     width: 50px;
     height: 50px;
-    background-color: #ba0000; /* kırmızı tema rengi */
-    color: #fff;
+    background-color: var(--renk-ana-kirmizi); /* kırmızı tema rengi */
+    color: var(--renk-beyaz);
     text-decoration: none;
     border-radius: 50%; /* Tamamen yuvarlak yap */
     font-size: 24px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    box-shadow: 0 4px 10px var(--golge-hafif);
     z-index: 1000; /* Diğer tüm elementlerin üzerinde dursun */
     
     /* Başlangıçta gizli olsun */
@@ -631,7 +664,7 @@ footer {
 }
 
 #scrollTopBtn:hover {
-    background-color: #00114b; /* Hover'da mavi */
+    background-color: var(--renk-ana-mavi); /* Hover'da mavi */
 }
 
 /* Mobil Menü Açık Durumu (JavaScript ile bu class eklenir) */
@@ -641,9 +674,9 @@ header nav.mobil-menu-aktif {
     top: 80px; /* Header'ın yüksekliğine göre ayarla, hemen altında başlasın */
     left: 0;
     width: 100%;
-    background-color: rgba(255, 255, 255, 0.98); /* Hafif şeffaf beyaz */
+    background-color: var(--arkaplan-mobil-menu); /* Hafif şeffaf beyaz */
     backdrop-filter: blur(5px); /* Arka planı bulanıklaştır (Modern görünüm) */
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    box-shadow: 0 5px 15px var(--golge-hafif);
     
     /* Menü elemanlarını dikeyde sırala */
     flex-direction: column;
