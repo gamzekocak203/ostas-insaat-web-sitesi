@@ -3,21 +3,21 @@
 /*
 İÇİNDEKİLER
 -----------
-1.  AYARLAR 
-2.  HEADER VE NAVİGASYON
-3.  HAMBURGER MENU
-4.  ANA SAYFA BÖLÜMLERİ
+1.AYARLAR VE ERİŞİLEBİLİRLİK 
+2.HEADER VE NAVİGASYON
+3.HAMBURGER MENU
+4.ANA SAYFA BÖLÜMLERİ
     4.1 Hero Bölümü
     4.2 Buton Bölümü
     4.3 Hakkımızda Bölümü
     4.4 Projeler Bölümü
-5.  FOOTER (ALT BİLGİ)
-6.  GENEL SAYFA AYARLARI
+5.FOOTER (ALT BİLGİ)
+6.GENEL SAYFA AYARLARI
     6.1 Hakkımızda
     6.2 Projeler
     6.3 İletişim
-7.  YUKARI ÇIK BUTONU
-8.  RESPONSIVE TASARIM
+7.YUKARI ÇIK BUTONU
+8.RESPONSIVE TASARIM
 */
 
 
@@ -25,7 +25,7 @@
 
 
 /* ========================================= */
-/* 1.AYARLAR                                 */
+/* 1.AYARLAR VE ERİŞİLEBİLİRLİK              */
 /* ========================================= */
 :root {
   
@@ -55,6 +55,17 @@
 }
 
 
+/* ERİŞİLEBİLİRLİK */
+:focus-visible {
+    /* Dış çizgi: 3px kalınlığında, ana tema rengimizde ve kesintisiz */
+    outline: 3px solid var(--renk-ana-kirmizi);
+    
+    /* Element ile dış çizgi arasına 2px boşluk bırak */
+    outline-offset: 2px;
+    
+    /* Dış çizginin köşelerini de hafif yuvarlat (isteğe bağlı) */
+    border-radius: 5px; 
+}
 
 
 
@@ -138,6 +149,9 @@ nav ul li a:hover {
     color: var(--renk-koyu-kirmizi); /* Fare üzerine gelince renk kırmızıya dönsün */
 }
 
+nav ul li a:focus-visible {
+    outline-color: var(--renk-ana-mavi);
+}
 
 
 
@@ -402,6 +416,11 @@ nav ul li a:hover {
 }
 /* css/style.css dosyasına eklenecek yeni kodlar */
 
+.proje-karti:focus-within {
+    outline: 3px solid var(--renk-ana-kirmizi);
+    outline-offset: 2px;
+}
+
 
 
 
@@ -479,6 +498,10 @@ footer {
     padding-top: 20px;
     font-size: 14px;
     color: var(--renk-metin-copyright); /* Telif hakkı yazısı için daha az dikkat çeken, kırmızıya dönük soluk bir renk */
+}
+
+footer :focus-visible {
+    outline-color: var(--renk-beyaz);
 }
 
 
@@ -580,20 +603,27 @@ footer {
     flex: 1; /* İki sütun da eşit genişlikte olsun */
 }
 
+.iletisim-sol h2 {
+    color: var(--renk-ana-kirmizi);
+}
+
+
 .bilgi-listesi li strong {
+    color: var(--renk-ana-kirmizi);
     list-style: none;
     padding: 0;
     line-height: 2; /* Satır aralarını açalım */
     font-size: 16px;
 }
+
 .bilgi-listesi a {
-    color: var(--renk-siyah);
+    color: var(--renk-ana-kirmizi);
     text-decoration: none;
     font-weight: bold;
     transition: color 0.3s ease;
 }
 .bilgi-listesi a:hover {
-    color: var(--renk-koyu-kirmizi);
+    color: var(--renk-ana-kirmizi);
 }
 
 /* İletişim Formu */
