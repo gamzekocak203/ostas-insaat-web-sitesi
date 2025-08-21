@@ -797,6 +797,73 @@ header nav.mobil-menu-aktif ul li a {
 
 
 
+/* ========================================= */
+/* 11. YAZDIRMA (PRINT) STİLLERİ - BASİT     */
+/* ========================================= */
+@media print {
+
+    /* 1. TÜM GEREKSİZ ELEMENTLERİ GİZLE */
+    /* Sayfayı tek sayfaya sığdırmak için en önemli adım budur. */
+    /* Yazdırılmasını istemediğiniz her şeyin class veya id'sini buraya ekleyin. */
+    header,
+    footer,
+    nav,
+    aside,
+    form,
+    .hero,
+    .cta-button,
+    .kart-buton,
+    .hamburger-menu,
+    #scrollTopBtn {
+        display: none !important;
+    }
+
+    /* 2. GENEL SAYFA VE YAZI AYARLARI */
+    /* Tüm elementlerdeki gölgeleri, arka planları sıfırla ve yazıyı siyah yap */
+    * {
+        background: transparent !important;
+        color: #000 !important;
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    /* Ana metin ayarları */
+    body {
+        font-family: 'Georgia', Times, serif; /* Okunabilir bir font */
+        font-size: 11pt; /* Tek sayfaya sığdırmaya yardımcı olmak için biraz küçültebiliriz */
+        margin: 0;
+        padding: 0;
+    }
+
+    /* 3. İÇERİĞİ SAYFANIN TAMAMINA YAY */
+    /* Ana içeriğin kenar boşlukları olmadan tüm sayfayı kullanmasını sağla */
+    .container,
+    main,
+    section,
+    article {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+    
+    /* İçeriklerin sayfa ortasında bölünmesini engelle */
+    img, 
+    .proje-karti,
+    .hakkimizda-icerik {
+        page-break-inside: avoid;
+    }
+
+    /* 4. (İSTEĞE BAĞLI) LİNKLERİ GÖSTER */
+    /* Bu bölüm linklerin yanına URL'lerini yazar. Eğer yer kaplamasını istemiyorsanız silebilirsiniz. */
+    a[href]:not([href^="#"])::after {
+        content: " (" attr(href) ")";
+        font-size: 9pt;
+        font-style: italic;
+        color: #444;
+    }
+}
+
 
 
 
