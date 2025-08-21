@@ -455,7 +455,7 @@ nav ul li a:focus-visible {
 }
 .yorum-karti cite {
     font-weight: bold;
-    color: var(--renk-koyu-kirmizi);
+    color: var(--renk-ana-kirmizi);
 }
 
 
