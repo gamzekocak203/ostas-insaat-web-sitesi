@@ -17,9 +17,10 @@
     6.1 Hakkımızda
     6.2 Projeler
     6.3 İletişim
-7.YUKARI ÇIK BUTONU
-8.RESPONSIVE TASARIM
-9.YAZDIRMA STİLLERİ
+7.404 HATA SAYFASI
+8.YUKARI ÇIK BUTONU
+9.RESPONSIVE TASARIM
+10.YAZDIRMA STİLLERİ
 */
 
 
@@ -745,11 +746,47 @@ footer :focus-visible {
 }
 
 
+/* style.css dosyasına eklenecek */
+
+/* ========================================= */
+/* 7. 404 HATA SAYFASI                       */
+/* ========================================= */
+.hata-sayfasi {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 80px 0;
+    min-height: calc(100vh - 160px); /* Ekranın yüksekliğinden header ve footer'ı çıkararak ortala */
+}
+
+.hata-sayfasi h1 {
+    font-size: 15vw; /* Ekran genişliğine göre büyüyüp küçülen birim */
+    font-weight: 700;
+    color: var(--primary-color);
+    line-height: 1;
+    margin: 0;
+}
+
+.hata-sayfasi h2 {
+    font-size: 3vw;
+    color: var(--dark-blue);
+    margin: 0 0 20px 0;
+}
+
+.hata-sayfasi p {
+    font-size: 18px;
+    color: var(--text-color-light);
+    max-width: 500px; /* Metnin çok fazla yayılmasını önle */
+    margin: 0 auto 30px auto;
+}
+
 
 
 
 /* ========================================= */
-/* 7 YUKARI ÇIK BUTONU                       */
+/* 8. YUKARI ÇIK BUTONU                      */
 /* ========================================= */
 /* css/style.css dosyasına, medya sorgularından önce eklenecek */
 /* Yukarı Çık Butonu */
@@ -825,9 +862,8 @@ header nav.mobil-menu-aktif ul li a {
 
 
 
-
 /* ========================================= */
-/* 8.RESPONSIVE TASARIM                      */
+/* 9.RESPONSIVE TASARIM                      */
 /* ========================================= */
 /* Tablet Boyutu (992px ve altı) */
 @media (max-width: 992px) {
@@ -892,7 +928,7 @@ header nav.mobil-menu-aktif ul li a {
 
 
 /* ========================================= */
-/* 9. YAZDIRMA STİLLERİ                      */
+/* 10. YAZDIRMA STİLLERİ                     */
 /* ========================================= */
 @media print {
 
