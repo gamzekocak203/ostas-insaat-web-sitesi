@@ -649,7 +649,7 @@ footer :focus-visible {
     text-align: center;
     flex-basis: calc(25% - 23px); /* 4'lü yapı için temel genişlik */
     max-width: 300px;
-    border-left: 5px solid var(--renk-ana-kirmizi); /* Başlığa vurgu */
+    border-top: 5px solid var(--renk-ana-kirmizi); /* Başlığa vurgu */
     box-shadow: 0 4px 15px var(--golge-hafif);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
