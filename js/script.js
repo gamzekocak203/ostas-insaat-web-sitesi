@@ -49,5 +49,16 @@ AOS.init({
         once: true      // Animasyonların sadece bir kere çalışmasını sağla
     });
 
+
+
+    // baguetteBox.js Lightbox Galerisini Başlat
+    // .lightbox-gallery class'ına sahip bir elementin var olup olmadığını kontrol et
+if (document.querySelector('.lightbox-gallery')) {
+    baguetteBox.run('.lightbox-gallery');
+}
+
 });
+
+
+
 

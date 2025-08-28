@@ -14,13 +14,14 @@
     4.5 Müşteri Yorumları
 5.FOOTER (ALT BİLGİ)
 6.GENEL SAYFA AYARLARI
-    6.1 Hakkımızda
+    6.1 Hakkımızda Ve Hizmetler
     6.2 Projeler
     6.3 İletişim
 7.404 HATA SAYFASI
 8.YUKARI ÇIK BUTONU
-9.RESPONSIVE TASARIM
-10.YAZDIRMA STİLLERİ
+9.LIGHTBOX
+10.RESPONSIVE TASARIM
+11.YAZDIRMA STİLLERİ
 */
 
 
@@ -574,7 +575,7 @@ footer :focus-visible {
 
 
 /* ========================================= */
-/* 6.1 HAKKIMIZDA                      */
+/* 6.1 HAKKIMIZDA VE HİZMETLER               */
 /* ========================================= */
 /* Hakkımızda Detay Sayfası */
 .hakkimizda-detay {
@@ -589,23 +590,29 @@ footer :focus-visible {
 }
 
 .misyon, .vizyon {
-    flex: 1;
+flex: 1;
     background-color: var(--renk-arkaplan-acik-gri);
-    padding: 30px;
+    padding: 40px 30px;
     border-radius: 8px;
+    text-align: center;
+    border-top: 5px solid var(--renk-ana-kirmizi); /* üst kırmızı çizgi */
+    box-shadow: 0 4px 15px var(--golge-hafif);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-
+.misyon:hover, .vizyon:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 25px var(--golge-belirgin);
+}
 .misyon-vizyon h3 {
-    color: var(--renk-ana-kirmizi);
-    font-size: 24px;
+color: var(--renk-ana-mavi);
+    font-size: 22px;
     margin-top: 0;
+    margin-bottom: 15px;
 }
-
-
-/* hizmetler bölümü  */
-.hizmetler-bolumu {
-    padding: 80px 0;
-    background-color: var(--renk-beyaz); /* Projeler bölümü gibi beyaz arkaplan */
+.misyon-vizyon p {
+    font-size: 15px;
+    line-height: 1.6;
+    color: var(--renk-metin-ana);
 }
 
 .hizmetler-grid {
@@ -863,7 +870,28 @@ header nav.mobil-menu-aktif ul li a {
 
 
 /* ========================================= */
-/* 9.RESPONSIVE TASARIM                      */
+/* 9. LIGHTBOX                               */
+/* ========================================= */
+#baguetteBox-overlay {
+    background-color: rgba(60, 64, 69, 0.9) !important; /* Arka plan rengini tema rengimizle uyumlu yap */
+}
+
+#baguetteBox-overlay .full-image img {
+    max-width: 70%;   /* genişliği ekranın %70’i ile sınırla */
+    max-height: 70%;  /* yüksekliği ekranın %70’i ile sınırla */
+    object-fit: contain; /* orantıyı koruyarak sığdır */
+}
+
+
+
+
+
+
+
+
+
+/* ========================================= */
+/* 10.RESPONSIVE TASARIM                     */
 /* ========================================= */
 /* Tablet Boyutu (992px ve altı) */
 @media (max-width: 992px) {
@@ -928,7 +956,7 @@ header nav.mobil-menu-aktif ul li a {
 
 
 /* ========================================= */
-/* 10. YAZDIRMA STİLLERİ                     */
+/* 11. YAZDIRMA STİLLERİ                     */
 /* ========================================= */
 @media print {
 
@@ -952,9 +980,11 @@ header nav.mobil-menu-aktif ul li a {
     /* Tüm elementlerdeki gölgeleri, arka planları sıfırla ve yazıyı siyah yap */
     * {
         background: transparent !important;
-        color: #000 !important;
+        color: var(--renk-siyah) !important;
         box-shadow: none !important;
         text-shadow: none !important;
+        border-left: none !important;
+        border-top: none !important;
     }
 
     /* Ana metin ayarları */
@@ -990,7 +1020,7 @@ header nav.mobil-menu-aktif ul li a {
         content: " (" attr(href) ")";
         font-size: 9pt;
         font-style: italic;
-        color: #444;
+        color: var(--renk-metin-ikincil);
     }
 }
 
