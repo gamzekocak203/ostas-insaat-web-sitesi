@@ -3,9 +3,10 @@
 /*
 İÇİNDEKİLER
 -----------
-1.GEBEL AYARLAR
-    1.1 Karanlık Mod Root
+1.AYARLAR
+    1.1 Root
     1.2 Erişilebilirlik
+    1.4 Genel
 2.HEADER VE NAVİGASYON
 3.HAMBURGER MENU
 4.ANA SAYFA BÖLÜMLERİ
@@ -31,7 +32,7 @@
 
 
 /* ========================================= */
-/* 1. GENEL AYARLAR                          */
+/* 1.AYARLAR                                 */
 /* ========================================= */
 :root {
   
@@ -60,15 +61,10 @@
   --arkaplan-mobil-menu: rgba(255, 255, 255, 0.98);
 }
 
+/* KARANLIK MOD ROOT */
 
 
 
-
-
-
-/* ========================================= */
-/* 1.1 KARANLIK MOD ROOT                     */
-/* ========================================= */
 
 
 
@@ -91,6 +87,9 @@
 
 
 
+/* ========================================= */
+/* 1.3 GENEL                                 */
+/* ========================================= */
 body {
     font-family: Arial, sans-serif; /* Okunabilir bir font belirleyelim */
     margin: 0; /* Sayfanın kenarlarındaki varsayılan boşluğu kaldıralım */
@@ -147,6 +146,7 @@ header .container {
 }
 
 
+
 /* Navigasyon Menüsü */
 nav ul {
     list-style-type: none; /* Liste maddelerinin başındaki noktaları kaldır */
@@ -188,8 +188,6 @@ nav ul li a:focus-visible {
 /* ========================================= */
 /* 3. HAMBURGER MENU                         */
 /* ========================================= */
-/* css/style.css dosyasına eklenecek yeni kodlar */
-/* header stillerinin altına ekleyin */
 .hamburger-menu {
     display: none; /* Masaüstünde gizli olsun */
     font-size: 28px;
@@ -208,7 +206,6 @@ nav ul li a:focus-visible {
 /* ========================================= */
 /* 4.1 HERO BÖLÜMÜ                           */
 /* ========================================= */
-/* Hero (Karşılama) Alanı */
 .hero {
     background-image: url('../images/hero-background.webp'); /* Resmin dosya yolu */
     background-size: cover; /* Resmi alana sığdır, taşan kısımları kes */
@@ -265,7 +262,6 @@ nav ul li a:focus-visible {
 /* ========================================= */
 /* 4.2 BUTON BÖLÜMÜ                          */
 /* ========================================= */
-/* Eylem Çağrısı Butonu (CTA) */
 .cta-button {
     background-color: var(--renk-ana-kirmizi); /* kırmızı arkaplan */
     color: var(--renk-beyaz); /* Beyaz metin */
@@ -279,7 +275,7 @@ nav ul li a:focus-visible {
 .cta-button:hover {
     background-color: var(--renk-koyu-kirmizi); /* Fare üzerine gelince biraz daha koyu kırmızı */
 }
-/* css/style.css dosyasına eklenecek yeni kodlar */
+
 
 
 
@@ -294,7 +290,6 @@ nav ul li a:focus-visible {
 /* ========================================= */
 /* 4.3 HAKKIMIZDA BÖLÜMÜ                     */
 /* ========================================= */
-/* Hakkımızda Bölümü */
 .hakkimizda {
     padding: 30px 0; /* Bölümün üstünden ve altından boşluk */
     background-color: var(--renk-arkaplan-acik-gri); /* Çok hafif bir gri arkaplan rengi */
@@ -340,9 +335,7 @@ nav ul li a:focus-visible {
     line-height: 1.7; /* Satır yüksekliği, metnin daha okunaklı olmasını sağlar */
     color: var(--renk-metin-ikincil);
 }
-/* css/style.css dosyasına eklenecek yeni kodlar */
 
-/* Genel Bölüm Başlığı Stili */
 .bolum-basligi {
     text-align: center;
     font-size: 38px;
@@ -361,7 +354,6 @@ nav ul li a:focus-visible {
 /* ========================================= */
 /* 4.4 PROJELER BÖLÜMÜ                       */
 /* ========================================= */
-/* Öne Çıkan Projeler Bölümü */
 .one-cikan-projeler {
     padding: 80px 0;
     background-color: var(--renk-beyaz); /* Arka plan bu sefer beyaz kalsın */
@@ -439,7 +431,6 @@ nav ul li a:focus-visible {
     background-color: var(--renk-ana-kirmizi);
     color: var(--renk-beyaz);
 }
-/* css/style.css dosyasına eklenecek yeni kodlar */
 
 .proje-karti:focus-within {
     outline: 3px solid var(--renk-ana-kirmizi);
@@ -492,7 +483,6 @@ nav ul li a:focus-visible {
 /* ========================================= */
 /* 5.FOOTER (ALT BİLGİ)                      */
 /* ========================================= */
-/* Footer (Alt Bilgi) Alanı */
 footer {
     background-color: var(--renk-ana-kirmizi); /* Ana tema rengimiz (koyu kırmızı) */
     color: var(--renk-metin-footer); /* Ana metinler için yumuşak bir beyaz tonu */
@@ -572,8 +562,6 @@ footer :focus-visible {
 /* ========================================= */
 /* 6 GENEL SAYFA AYARLARI                    */
 /* ========================================= */
-/* css/style.css dosyasına eklenecek yeni kodlar */
-/* Genel Sayfa Başlığı Alanı */
 .sayfa-basligi {
     background-color: var(--renk-arkaplan-sayfa-basligi);
     padding: 40px 0;
@@ -596,9 +584,8 @@ footer :focus-visible {
 
 
 /* ========================================= */
-/* 6.1 HAKKIMIZDA VE HİZMETLER               */
+/* 6.1 HAKKIMIZDA,HİZMETLER,SSS              */
 /* ========================================= */
-/* Hakkımızda Detay Sayfası */
 .hakkimizda-detay {
     padding: 80px 0;
 }
@@ -635,6 +622,9 @@ footer :focus-visible {
     color: var(--renk-metin-ana);
 }
 
+
+
+/* HİZMETLER */
 .hizmetler-grid {
     display: flex;
     justify-content: center; /* Kartları ortala */
@@ -679,9 +669,9 @@ footer :focus-visible {
 }
 
 
-/* ========================================= */
-/* 15. SIKÇA SORULAN SORULAR (SSS)         */
-/* ========================================= */
+
+
+/* SIKÇA SORULAN SORULAR (SSS) */
 .sss-akordiyon {
     max-width: 800px;
     margin: 0 auto;
@@ -764,8 +754,6 @@ footer :focus-visible {
 /* ========================================= */
 /* 6.2 PROJELER                              */
 /* ========================================= */
-/* css/style.css dosyasına eklenecek yeni kod */
-/* Proje Galerisi Sayfası */
 .proje-galerisi {
     padding: 80px 0;
     background-color: var(--renk-arkaplan-acik-gri);
@@ -779,7 +767,6 @@ footer :focus-visible {
 /* ========================================= */
 /* 6.2 İLETİŞİM                              */
 /* ========================================= */
-/* İletişim Sayfası */
 .iletisim-sayfasi {
     padding: 80px 0;
 }
@@ -816,7 +803,10 @@ footer :focus-visible {
     color: var(--renk-ana-kirmizi);
 }
 
-/* İletişim Formu */
+
+
+
+/* İLETİŞİM FORMU */
 .iletisim-formu input,
 .iletisim-formu textarea {
     width: 100%;
@@ -834,7 +824,9 @@ footer :focus-visible {
     cursor: pointer;
 }
 
-/* Harita */
+
+
+/* HARİTA*/
 .iletisim-sag iframe {
     width: 100%;
     height: 100%; /* Kapsayıcısının tamamını doldur */
@@ -844,7 +836,35 @@ footer :focus-visible {
 }
 
 
-/* style.css dosyasına eklenecek */
+
+
+
+/* ========================================= */
+/* 7.FORM DOĞRULAMA                          */
+/* ========================================= */
+/* Form Sonuç Mesajları */
+.form-sonuc {
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: var(--main-border-radius);
+    display: none; /* Başlangıçta gizli */
+}
+.form-sonuc.basari {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+    display: block; /* Başarılı olunca görünür yap */
+}
+.form-sonuc.hata {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+    display: block; /* Hata olunca görünür yap */
+}
+
+
+
+
 
 /* ========================================= */
 /* 7. 404 HATA SAYFASI                       */
@@ -883,11 +903,11 @@ footer :focus-visible {
 
 
 
+
+
 /* ========================================= */
 /* 8. YUKARI ÇIK BUTONU                      */
 /* ========================================= */
-/* css/style.css dosyasına, medya sorgularından önce eklenecek */
-/* Yukarı Çık Butonu */
 #scrollTopBtn {
     display: flex;
     justify-content: center;

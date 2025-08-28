@@ -47,13 +47,14 @@
                 </ul>
 
                 <h2 style="margin-top: 40px;" data-aos="fade-right" data-aos-delay="100">BİZE ULAŞIN</h2>
-                <form class="iletisim-formu">
-                    <input type="text" name="adsoyad" placeholder="Adınız Soyadınız" required data-aos="fade-right" data-aos-delay="100">
-                    <input type="email" name="email" placeholder="E-posta Adresiniz" required data-aos="fade-right" data-aos-delay="100">
-                    <input type="text" name="konu" placeholder="Konu" required data-aos="fade-right" data-aos-delay="100">
-                    <textarea name="mesaj" rows="6" placeholder="Mesajınız" required data-aos="fade-right" data-aos-delay="100"></textarea>
+                <form class="iletisim-formu id="iletisim-formu"">
+                    <input type="text" id="adsoyad" name="adsoyad" placeholder="Adınız Soyadınız" required data-aos="fade-right" data-aos-delay="100">
+                    <input type="email" id="email" name="email" placeholder="E-posta Adresiniz" required data-aos="fade-right" data-aos-delay="100">
+                    <input type="text" id="konu" name="konu" placeholder="Konu" required data-aos="fade-right" data-aos-delay="100">
+                    <textarea id="mesaj" name="mesaj" rows="6" placeholder="Mesajınız" required data-aos="fade-right" data-aos-delay="100"></textarea>
                     <button type="submit" class="cta-button" data-aos="fade-up" data-aos-delay="100">Gönder</button>
                 </form>
+                <div id="form-sonuc" class="form-sonuc"></div>
             </div>
 
             <div class="iletisim-sag" data-aos="fade-left" data-aos-duration="800">
