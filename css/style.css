@@ -877,8 +877,8 @@ header nav.mobil-menu-aktif ul li a {
 }
 
 #baguetteBox-overlay .full-image img {
-    max-width: 70%;   /* genişliği ekranın %70’i ile sınırla */
-    max-height: 70%;  /* yüksekliği ekranın %70’i ile sınırla */
+    max-width: 80%;   /* genişliği ekranın %70’i ile sınırla */
+    max-height: 80%;  /* yüksekliği ekranın %70’i ile sınırla */
     object-fit: contain; /* orantıyı koruyarak sığdır */
 }
 
