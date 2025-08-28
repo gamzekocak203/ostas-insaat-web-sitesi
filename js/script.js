@@ -60,5 +60,24 @@ if (document.querySelector('.lightbox-gallery')) {
 });
 
 
-
-
+    const sssItems = document.querySelectorAll('.sss-item');
+    
+    // Eğer sayfada SSS bölümü varsa...
+    if (sssItems.length > 0) {
+        sssItems.forEach(item => {
+            const soru = item.querySelector('.sss-soru');
+            
+            soru.addEventListener('click', () => {
+                // Tıkladığımız soru zaten açık mı diye kontrol et
+                const isOpen = item.classList.contains('active');
+                
+                // Önce tüm açık olanları kapat (profesyonel dokunuş)
+                sssItems.forEach(i => i.classList.remove('active'));
+                
+                // Eğer tıkladığımız kapalıysa, onu aç
+                if (!isOpen) {
+                    item.classList.add('active');
+                }
+            });
+        });
+    }

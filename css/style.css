@@ -3,7 +3,9 @@
 /*
 İÇİNDEKİLER
 -----------
-1.AYARLAR VE ERİŞİLEBİLİRLİK 
+1.GEBEL AYARLAR
+    1.1 Karanlık Mod Root
+    1.2 Erişilebilirlik
 2.HEADER VE NAVİGASYON
 3.HAMBURGER MENU
 4.ANA SAYFA BÖLÜMLERİ
@@ -29,7 +31,7 @@
 
 
 /* ========================================= */
-/* 1.AYARLAR VE ERİŞİLEBİLİRLİK              */
+/* 1. GENEL AYARLAR                          */
 /* ========================================= */
 :root {
   
@@ -59,7 +61,22 @@
 }
 
 
-/* ERİŞİLEBİLİRLİK */
+
+
+
+
+
+/* ========================================= */
+/* 1.1 KARANLIK MOD ROOT                     */
+/* ========================================= */
+
+
+
+
+
+/* ========================================= */
+/* 1.2 ERİŞİLEBİLİRLİK                       */
+/* ========================================= */
 :focus-visible {
     /* Dış çizgi: 3px kalınlığında, ana tema rengimizde ve kesintisiz */
     outline: 3px solid var(--renk-ana-kirmizi);
@@ -70,7 +87,6 @@
     /* Dış çizginin köşelerini de hafif yuvarlat (isteğe bağlı) */
     border-radius: 5px; 
 }
-
 
 
 
@@ -113,14 +129,17 @@ header .container {
     align-items: center; /* Dikeyde ortalamak için */
 }
 
+.nav-tema-container {
+    display: flex;
+    align-items: center;
+}
+
 .logo {
     font-size: 36px; /* Logo yazısının boyutu */
     font-weight: bold; /* Kalın yazı */
     color: var(--renk-ana-kirmizi); /* Kırmızı bir renk */
     text-decoration: none; /* Linkin altındaki çizgiyi kaldır */
     transition: color 0.3s ease;
-
-    
 }
 
 .logo:hover {
@@ -164,6 +183,8 @@ nav ul li a:focus-visible {
 
 
 
+
+
 /* ========================================= */
 /* 3. HAMBURGER MENU                         */
 /* ========================================= */
@@ -185,7 +206,7 @@ nav ul li a:focus-visible {
 
 
 /* ========================================= */
-/* 4.1 HERO BÖLÜMÜ                          */
+/* 4.1 HERO BÖLÜMÜ                           */
 /* ========================================= */
 /* Hero (Karşılama) Alanı */
 .hero {
@@ -590,12 +611,11 @@ footer :focus-visible {
 }
 
 .misyon, .vizyon {
-flex: 1;
+    flex: 1;
     background-color: var(--renk-arkaplan-acik-gri);
     padding: 40px 30px;
     border-radius: 8px;
     text-align: center;
-    border-top: 5px solid var(--renk-ana-kirmizi); /* üst kırmızı çizgi */
     box-shadow: 0 4px 15px var(--golge-hafif);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -604,7 +624,7 @@ flex: 1;
     box-shadow: 0 8px 25px var(--golge-belirgin);
 }
 .misyon-vizyon h3 {
-color: var(--renk-ana-mavi);
+    color: var(--renk-ana-kirmizi);
     font-size: 22px;
     margin-top: 0;
     margin-bottom: 15px;
@@ -629,7 +649,7 @@ color: var(--renk-ana-mavi);
     text-align: center;
     flex-basis: calc(25% - 23px); /* 4'lü yapı için temel genişlik */
     max-width: 300px;
-    border-top: 5px solid var(--renk-ana-kirmizi); /* Başlığa vurgu */
+    border-left: 5px solid var(--renk-ana-kirmizi); /* Başlığa vurgu */
     box-shadow: 0 4px 15px var(--golge-hafif);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -656,6 +676,77 @@ color: var(--renk-ana-mavi);
     font-size: 15px;
     line-height: 1.6;
     color: var(--renk-metin-ana);
+}
+
+
+/* ========================================= */
+/* 15. SIKÇA SORULAN SORULAR (SSS)         */
+/* ========================================= */
+.sss-akordiyon {
+    max-width: 800px;
+    margin: 0 auto;
+    border-top: 1px solid var(--renk-kenarlik-normal);
+}
+
+.sss-item {
+    border-bottom: 1px solid var(--renk-kenarlik-normal);
+}
+
+.sss-soru {
+    width: 100%;
+    padding: 20px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--renk-metin-ana);
+    text-align: left;
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.3s ease;
+}
+
+.sss-soru:hover {
+    background-color: var(--renk-arkaplan-acik-gri);
+}
+
+
+.sss-ikon {
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--renk-ana-kirmizi);
+    transition: transform 0.3s ease;
+}
+
+.sss-cevap {
+    /* Açılıp kapanma animasyonu için en iyi yöntem */
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease, padding 0.4s ease;
+}
+.sss-cevap p {
+    padding: 0 20px;
+    margin-top: 0;
+    line-height: 1.7;
+    color: var(--renk-metin-ikincil);
+}
+
+/* JavaScript ile eklenecek olan 'active' durumu */
+.sss-item.active .sss-soru {
+    background-color: var(--renk-arkaplan-acik-gri);
+}
+
+
+.sss-item.active .sss-cevap {
+    max-height: 200px; /* Cevabın sığacağı kadar bir yükseklik */
+    padding-bottom: 20px;
+}
+
+.sss-item.active .sss-ikon {
+    transform: rotate(45deg); /* + ikonunu X ikonuna çevirir */
 }
 
 
@@ -881,6 +972,13 @@ header nav.mobil-menu-aktif ul li a {
     max-height: 80%;  /* yüksekliği ekranın %70’i ile sınırla */
     object-fit: contain; /* orantıyı koruyarak sığdır */
 }
+
+
+
+
+
+
+
 
 
 
