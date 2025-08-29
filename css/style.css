@@ -1019,6 +1019,8 @@ header nav.mobil-menu-aktif ul li a {
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
     box-shadow: 0 -3px 12px var(--golge-belirgin);
+    max-width: 100vw; /* Ekran genişliğini aşmasını engelle */
+    overflow: hidden; /* Taşan içeriği gizle */
 }
 
 .cookie-banner.visible {
@@ -1095,7 +1097,6 @@ header nav.mobil-menu-aktif ul li a {
         flex-direction: column;
         text-align: center;
     }
-
     
 }
 
@@ -1124,10 +1125,10 @@ header nav.mobil-menu-aktif ul li a {
     .hamburger-menu {
         display: block; /* Hamburger ikonunu göster */
     }
-
-     .cookie-banner {
+    
+    .cookie-banner {
         flex-direction: column;
-        padding: 20px; 
+        padding: 20px;
     }
     .cookie-banner .cta-button {
         width: 100%;
