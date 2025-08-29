@@ -1023,6 +1023,7 @@ header nav.mobil-menu-aktif ul li a {
 
 .cookie-banner.visible {
     display: flex;
+    animation: slideUp 0.4s ease-out;
 }
 
 .cookie-banner p {
@@ -1039,10 +1040,12 @@ header nav.mobil-menu-aktif ul li a {
     color: var(--renk-beyaz);
     font-weight: 600;
     cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
 }
 
 .cookie-banner .cta-button:hover {
     background: var(--renk-koyu-kirmizi);
+    transform: scale(1.05);
 }
 
 
@@ -1120,8 +1123,8 @@ header nav.mobil-menu-aktif ul li a {
 
      .cookie-banner {
         flex-direction: column;
-        padding: 20px; 
-          
+        padding: 20px;
+        text-align: center;   
     }
     .cookie-banner .cta-button {
         width: 100%;
