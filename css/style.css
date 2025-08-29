@@ -1048,11 +1048,7 @@ header nav.mobil-menu-aktif ul li a {
     transform: scale(1.05);
 }
 
-/* Açılış animasyonu */
-@keyframes slideUp {
-    from { transform: translateY(100%); opacity: 0; }
-    to   { transform: translateY(0); opacity: 1; }
-}
+
 
 
 
@@ -1127,7 +1123,7 @@ header nav.mobil-menu-aktif ul li a {
 
      .cookie-banner {
         flex-direction: column;
-        padding: 20px;      
+        padding: 20px;   
     }
     .cookie-banner .cta-button {
         width: 100%;
