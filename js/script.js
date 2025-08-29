@@ -142,3 +142,12 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
 });
+
+
+// SAYFA YÜKLEME ANİMASYONU (LOADER) MANTIĞI
+window.onload = function() {
+    const loaderWrapper = document.querySelector('#loader-wrapper');
+    if (loaderWrapper) {
+        loaderWrapper.classList.add('hidden');
+    }
+};
