@@ -1127,8 +1127,7 @@ header nav.mobil-menu-aktif ul li a {
 
      .cookie-banner {
         flex-direction: column;
-        padding: 20px;
-        text-align: center;   
+        padding: 20px; 
     }
     .cookie-banner .cta-button {
         width: 100%;
