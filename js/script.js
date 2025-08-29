@@ -115,4 +115,30 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    
+    // ÇEREZ ONAY BANNER'I MANTIĞI
+    const cookieBanner = document.querySelector('#cookie-banner');
+    const acceptBtn = document.querySelector('#cookie-accept-btn');
+
+    // Eğer banner elementi sayfada varsa devam et
+    if (cookieBanner && acceptBtn) {
+        
+        // 1. Sayfa yüklendiğinde, localStorage'da onay bilgisi var mı diye kontrol et.
+        const consentGiven = localStorage.getItem('cookieConsent');
+        
+        // 2. Eğer daha önce onay verilmemişse (!consentGiven), banner'ı göster.
+        if (!consentGiven) {
+            cookieBanner.classList.add('visible');
+        }
+
+        // 3. 'Kabul Et' butonuna tıklanınca ne olacağını belirle.
+        acceptBtn.addEventListener('click', () => {
+            // Onay bilgisini localStorage'a kaydet. Değerin ne olduğu önemli değil, var olması yeterli.
+            localStorage.setItem('cookieConsent', 'true');
+            
+            // Banner'ı gizle.
+            cookieBanner.classList.remove('visible');
+        });
+    }
+
 });
