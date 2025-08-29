@@ -1048,6 +1048,10 @@ header nav.mobil-menu-aktif ul li a {
     transform: scale(1.05);
 }
 
+@keyframes slideUp {
+    from { transform: translateY(100%); opacity: 0; }
+    to   { transform: translateY(0); opacity: 1; }
+}
 
 
 
