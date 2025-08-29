@@ -998,6 +998,9 @@ header nav.mobil-menu-aktif ul li a {
 
 
 
+/* ========================================= */
+/* 10. ÇEREZ ONAY BANNER'I                   */
+/* ========================================= */
 .cookie-banner {
     position: fixed;
     bottom: 0;
@@ -1007,13 +1010,7 @@ header nav.mobil-menu-aktif ul li a {
     color: var(--renk-metin-ana);
     padding: 18px 30px;
     z-index: 1001;
-    
-    /* Değişiklik 1: Display'i flex olarak bırak, opacity ile gizle */
-    display: flex;
-    opacity: 0;
-    visibility: hidden;
-    transform: translateY(100%); /* Başlangıçta aşağıda gizli */
-    
+    display: none;
     align-items: center;
     justify-content: space-between;
     gap: 20px;
@@ -1022,17 +1019,38 @@ header nav.mobil-menu-aktif ul li a {
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
     box-shadow: 0 -3px 12px var(--golge-belirgin);
-    
-    /* Değişiklik 2: Transition ekle */
-    transition: all 0.4s ease;
 }
 
 .cookie-banner.visible {
-    /* Değişiklik 3: Display değiştirme yerine opacity ve transform kullan */
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0);
-    /* slideUp animasyonuna artık ihtiyaç yok */
+    display: flex;
+    animation: slideUp 0.4s ease-out;
+}
+
+.cookie-banner p {
+    margin: 0;
+    line-height: 1.5;
+    flex: 1;
+}
+
+.cookie-banner .cta-button {
+    padding: 12px 22px;
+    border-radius: 6px;
+    border: none;
+    background: var(--renk-ana-kirmizi);
+    color: var(--renk-beyaz);
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.cookie-banner .cta-button:hover {
+    background: var(--renk-koyu-kirmizi);
+    transform: scale(1.05);
+}
+
+@keyframes slideUp {
+    from { transform: translateY(100%); opacity: 0; }
+    to   { transform: translateY(0); opacity: 1; }
 }
 
 
@@ -1107,17 +1125,10 @@ header nav.mobil-menu-aktif ul li a {
         display: block; /* Hamburger ikonunu göster */
     }
 
-    .cookie-banner {
+     .cookie-banner {
         flex-direction: column;
-        padding: 20px;
-        /* Mobilde de aynı yaklaşım */
-        transform: translateY(100%);
+        padding: 20px; 
     }
-    
-    .cookie-banner.visible {
-        transform: translateY(0);
-    }
-    
     .cookie-banner .cta-button {
         width: 100%;
         margin-top: 15px;
