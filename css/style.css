@@ -1123,7 +1123,17 @@ header nav.mobil-menu-aktif ul li a {
 
      .cookie-banner {
         flex-direction: column;
-        padding: 20px;   
+        padding: 20px; 
+        text-align: center;
+
+        /* Alt kısımda sabit */
+        bottom: 0;
+        left: 0;
+        right: 0;
+
+        /* İçerik hizalama */
+        justify-content: center; /* dikeyde ortala */
+        align-items: center;     /* yatayda ortala */  
     }
     .cookie-banner .cta-button {
         width: 100%;
