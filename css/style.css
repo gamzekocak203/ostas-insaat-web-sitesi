@@ -211,7 +211,7 @@ nav ul li a:focus-visible {
     background-image: url('../images/hero-background.webp'); /* Resmin dosya yolu */
     background-size: cover; /* Resmi alana sığdır, taşan kısımları kes */
     background-position: center; /* Resmi ortala */
-    height: 85vh; /* Ekran yüksekliğinin %85'i kadar olsun */
+    height: 90vh; /* Ekran yüksekliğinin %85'i kadar olsun */
     color: var(--renk-beyaz); /* Üzerindeki tüm yazıların rengi beyaz olsun */
 
     /* İçeriği (hero-content) dikey ve yatayda ortalamak için Flexbox kullanıyoruz */
@@ -1205,6 +1205,7 @@ header nav.mobil-menu-aktif ul li a {
     .cta-button,
     .kart-buton,
     .hamburger-menu,
+    .cookie-banner,
     #scrollTopBtn {
         display: none !important;
     }
@@ -1218,15 +1219,12 @@ header nav.mobil-menu-aktif ul li a {
         text-shadow: none !important;
         border-left: none !important;
         border-top: none !important;
+        margin: none!important;
+        padding: none!important;
     }
 
-    /* Ana metin ayarları */
-    body {
-        font-family: 'Georgia', Times, serif; /* Okunabilir bir font */
-        font-size: 11pt; /* Tek sayfaya sığdırmaya yardımcı olmak için biraz küçültebiliriz */
-        margin: 0;
-        padding: 0;
-    }
+
+    
 
     /* 3. İÇERİĞİ SAYFANIN TAMAMINA YAY */
     /* Ana içeriğin kenar boşlukları olmadan tüm sayfayı kullanmasını sağla */
@@ -1241,19 +1239,11 @@ header nav.mobil-menu-aktif ul li a {
     }
     
     /* İçeriklerin sayfa ortasında bölünmesini engelle */
+    .misyon-vizyon,.hizmet-karti,.one-cikan-projeler,
     img, 
     .proje-karti,
     .hakkimizda-icerik {
         page-break-inside: avoid;
-    }
-
-    /* 4. (İSTEĞE BAĞLI) LİNKLERİ GÖSTER */
-    /* Bu bölüm linklerin yanına URL'lerini yazar. Eğer yer kaplamasını istemiyorsanız silebilirsiniz. */
-    a[href]:not([href^="#"])::after {
-        content: " (" attr(href) ")";
-        font-size: 9pt;
-        font-style: italic;
-        color: var(--renk-metin-ikincil);
     }
 }
 
