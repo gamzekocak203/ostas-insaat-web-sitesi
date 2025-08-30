@@ -364,6 +364,7 @@ nav ul li a:focus-visible {
     display: flex;
     justify-content: space-between; /* Kartlar arasına boşluk bırakarak yay */
     gap: 30px; /* Kartlar arasındaki boşluk */
+    flex-wrap: wrap;
 }
 
 .proje-karti {
