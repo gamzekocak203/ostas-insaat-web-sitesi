@@ -4,17 +4,15 @@
 İÇİNDEKİLER
 -----------
 1.AYARLAR
-    1.1 Root
-    1.2 Erişilebilirlik
-    1.4 Genel
+    1.1 Erişilebilirlik
+    1.2 Genel
 2.HEADER VE NAVİGASYON
 3.HAMBURGER MENU
 4.ANA SAYFA BÖLÜMLERİ
-    4.1 Hero Bölümü
-    4.2 Buton Bölümü
-    4.3 Hakkımızda Bölümü
-    4.4 Projeler Bölümü
-    4.5 Müşteri Yorumları
+    4.1 Buton Bölümü
+    4.2 Hakkımızda Bölümü
+    4.3 Projeler Bölümü
+    4.4 Müşteri Yorumları
 5.FOOTER (ALT BİLGİ)
 6.GENEL SAYFA AYARLARI
     6.1 Hakkımızda Ve Hizmetler
@@ -73,7 +71,7 @@
 
 
 /* ========================================= */
-/* 1.2 ERİŞİLEBİLİRLİK                       */
+/* 1.1 ERİŞİLEBİLİRLİK                       */
 /* ========================================= */
 :focus-visible {
     /* Dış çizgi: 3px kalınlığında, ana tema rengimizde ve kesintisiz */
@@ -90,7 +88,7 @@
 
 
 /* ========================================= */
-/* 1.3 GENEL                                 */
+/* 1.2 GENEL                                 */
 /* ========================================= */
 body {
     font-family: Arial, sans-serif; /* Okunabilir bir font belirleyelim */
@@ -206,8 +204,9 @@ nav ul li a:focus-visible {
 
 
 /* ========================================= */
-/* 4.1 HERO BÖLÜMÜ                           */
+/* 4.ANA SAYFA BÖLÜMLERİ                     */
 /* ========================================= */
+
 .hero {
     background-image: url('../images/hero-background.webp'); /* Resmin dosya yolu */
     background-size: cover; /* Resmi alana sığdır, taşan kısımları kes */
@@ -262,7 +261,7 @@ nav ul li a:focus-visible {
 
 
 /* ========================================= */
-/* 4.2 BUTON BÖLÜMÜ                          */
+/* 4.1 BUTON BÖLÜMÜ                          */
 /* ========================================= */
 .cta-button {
     background-color: var(--renk-ana-kirmizi); /* kırmızı arkaplan */
@@ -290,7 +289,7 @@ nav ul li a:focus-visible {
 
 
 /* ========================================= */
-/* 4.3 HAKKIMIZDA BÖLÜMÜ                     */
+/* 4.2 HAKKIMIZDA BÖLÜMÜ                     */
 /* ========================================= */
 .hakkimizda {
     padding: 30px 0; /* Bölümün üstünden ve altından boşluk */
@@ -354,7 +353,7 @@ nav ul li a:focus-visible {
 
 
 /* ========================================= */
-/* 4.4 PROJELER BÖLÜMÜ                       */
+/* 4.3 PROJELER BÖLÜMÜ                       */
 /* ========================================= */
 .one-cikan-projeler {
     padding: 80px 0;
@@ -446,7 +445,7 @@ nav ul li a:focus-visible {
 
 
 /* ========================================= */
-/* 4.5 MÜŞTERİ YORUMLARI                     */
+/* 4.4 MÜŞTERİ YORUMLARI                     */
 /* ========================================= */
 .yorumlar {
     background-color: var(--renk-arkaplan-acik-gri);
@@ -471,9 +470,7 @@ nav ul li a:focus-visible {
 }
 .yorum-karti cite {
     font-weight: bold;
-    color: var(--renk-ana-mavi);
-    margin-top: auto;
-    align-self: flex-start;    
+    color: var(--renk-ana-mavi);    
 }
 
 
@@ -846,7 +843,6 @@ footer :focus-visible {
 /* ========================================= */
 /* 7.FORM DOĞRULAMA                          */
 /* ========================================= */
-/* Form Sonuç Mesajları */
 .form-sonuc {
     margin-top: 20px;
     padding: 15px;
@@ -1012,7 +1008,7 @@ header nav.mobil-menu-aktif ul li a {
     background: var(--renk-beyaz);
     color: var(--renk-metin-ana);
     padding: 18px 30px;
-    z-index: 1001;
+    z-index: 1001 ;
     display: none;
     align-items: center;
     justify-content: space-between;
@@ -1024,6 +1020,7 @@ header nav.mobil-menu-aktif ul li a {
     box-shadow: 0 -3px 12px var(--golge-belirgin);
     max-width: 100vw; /* Ekran genişliğini aşmasını engelle */
     overflow: hidden; /* Taşan içeriği gizle */
+    
 }
 
 .cookie-banner.visible {
@@ -1071,7 +1068,7 @@ header nav.mobil-menu-aktif ul li a {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: var(--renk-ana-mavi); /* Temaya uygun arkaplan */
+    background-color: var(--renk-beyaz); /* Temaya uygun arkaplan */
     z-index: 9999; /* Her şeyin en üstünde olmalı */
 
     /* İçindeki spinner'ı ortalamak için */
@@ -1091,8 +1088,8 @@ header nav.mobil-menu-aktif ul li a {
 
 /* Spinner animasyonu */
 .loader {
-    border: 8px solid #f3f3f3; /* Halkanın açık gri kısmı */
-    border-top: 8px solid var(--primary-color); /* Halkanın turuncu kısmı */
+    border: 8px solid var(--renk-arkaplan-acik-gri); /* Halkanın açık gri kısmı */
+    border-top: 8px solid var(--renk-ana-kirmizi); 
     border-radius: 50%; /* Tam yuvarlak yap */
     width: 60px;
     height: 60px;
@@ -1104,6 +1101,8 @@ header nav.mobil-menu-aktif ul li a {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
 }
+
+
 
 
 

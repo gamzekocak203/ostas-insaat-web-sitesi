@@ -15,7 +15,13 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // js/script.js dosyasının içine, mobil menü kodundan sonra
+    
+
+
+
+
+
+
 
     // YUKARI ÇIK BUTONU LOGIĞI
     const scrollTopBtn = document.querySelector('#scrollTopBtn');
@@ -45,10 +51,25 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+
+
+
+
+
+    
+
+
     AOS.init({
         duration: 800, // Animasyonların süresi (milisaniye)
         once: true      // Animasyonların sadece bir kere çalışmasını sağla
     });
+
+
+
+
+
+
+
 
     // baguetteBox.js Lightbox Galerisini Başlat
     // .lightbox-gallery class'ına sahip bir elementin var olup olmadığını kontrol et
@@ -56,8 +77,16 @@ document.addEventListener('DOMContentLoaded', () => {
         baguetteBox.run('.lightbox-gallery');
     }
 
-    const sssItems = document.querySelectorAll('.sss-item');
+
+
+
+
+
+
+
+
     
+    const sssItems = document.querySelectorAll('.sss-item');
     // Eğer sayfada SSS bölümü varsa...
     if (sssItems.length > 0) {
         sssItems.forEach(item => {
@@ -77,6 +106,13 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
     }
+
+
+
+
+
+
+
 
     // İLETİŞİM FORMU YÖNETİMİ
     const iletisimFormu = document.querySelector('#iletisim-formu');
@@ -115,6 +151,13 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+
+
+
+
+
+
+
     
     // ÇEREZ ONAY BANNER'I MANTIĞI
     const cookieBanner = document.querySelector('#cookie-banner');
@@ -142,6 +185,11 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
 });
+
+
+
+
+
 
 
 // SAYFA YÜKLEME ANİMASYONU (LOADER) MANTIĞI
