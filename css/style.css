@@ -164,7 +164,6 @@ header {
     box-shadow: 0 2px 5px var(--golge-hafif); /* Hafif bir gölge efekti */
     position: relative; /* Konumlandırma bağlamı oluşturur */
     z-index: 1000;      /* Header'ı diğer tüm elementlerin üzerine çıkarır */
-    justify-content: flex-start;
 }
 
 header .container {
