@@ -184,7 +184,61 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+     // TEMA DEĞİŞTİRİCİ (DARK MODE) MANTIĞI
+    const themeToggle = document.querySelector('#theme-toggle');
+    const body = document.body;
+
+    // 1. Sayfa yüklendiğinde kullanıcının kaydedilmiş tercihini kontrol et
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'dark') {
+        body.classList.add('dark-mode');
+        themeToggle.innerHTML = '☀️'; // Güneş ikonu
+    } else {
+        themeToggle.innerHTML = '🌙'; // Ay ikonu
+    }
+
+    // 2. Düğmeye tıklandığında temayı değiştir
+    themeToggle.addEventListener('click', () => {
+        body.classList.toggle('dark-mode');
+
+        // 3. Yeni tercihi kaydet ve ikon değiştir
+        if (body.classList.contains('dark-mode')) {
+            localStorage.setItem('theme', 'dark');
+            themeToggle.innerHTML = '☀️';
+        } else {
+            localStorage.setItem('theme', 'light');
+            themeToggle.innerHTML = '🌙';
+        }
+    });
+
+
+
+
+
+    
 });
+
+
+
+
+
+
+
+
 
 
 
