@@ -545,7 +545,7 @@ nav ul li a:focus-visible {
 /* 5.FOOTER (ALT BİLGİ)                      */
 /* ========================================= */
 footer {
-    background-color: var(--renk-ana-kirmizi); /* Ana tema rengimiz (koyu kırmızı) */
+    background-color: var(--karanlik-siyah,--renk-ana-kirmizi); /* Ana tema rengimiz (koyu kırmızı) */
     color: var(--renk-metin-footer); /* Ana metinler için yumuşak bir beyaz tonu */
     padding: 60px 0 20px 0;
 }
