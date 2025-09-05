@@ -96,7 +96,7 @@ body {
 /* style.css dosyasının en başına, :root'un altına ekle */
 
 body.dark-mode {
-    --karanlık-siyah:#000000
+    --karanlik-siyah:#000000
 
 
 }
@@ -158,7 +158,7 @@ body.dark-mode {
 /* 2.  HEADER VE NAVİGASYON                  */
 /* ========================================= */
 header {
-    background-color: var(--karanlık-siyah,--renk-beyaz); /* Beyaz arkaplan */
+    background-color: var(--karanlik-siyah,--renk-beyaz); /* Beyaz arkaplan */
     padding: 20px 0; /* Üstten ve alttan 20px boşluk */  
     border-bottom: 1px solid var(--renk-kenarlik-ince); /* Altına ince bir çizgi */
     box-shadow: 0 2px 5px var(--golge-hafif); /* Hafif bir gölge efekti */
