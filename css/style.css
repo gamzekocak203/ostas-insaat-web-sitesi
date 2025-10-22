@@ -95,14 +95,9 @@ body {
 
 /* style.css dosyasının en başına, :root'un altına ekle */
 
-body.dark-mode {
-    --gece:#30302f;
-    --karanlik-siyah:#1c1c1b;
-    --karann:#1f1f1d;
-    --ayay:#454542;
-    --met:#d9d9d0;
-    --kır:#b03a3e
-}
+
+
+
 
 
 
@@ -161,9 +156,9 @@ body.dark-mode {
 /* 2.  HEADER VE NAVİGASYON                  */
 /* ========================================= */
 header {
-    background-color: var(--karanlik-siyah,--renk-beyaz); /* Beyaz arkaplan */
+    background-color: var(--renk-beyaz); /* Beyaz arkaplan */
     padding: 20px 0; /* Üstten ve alttan 20px boşluk */  
-    border-bottom: 1px solid var(--karann,--renk-kenarlik-ince); /* Altına ince bir çizgi */
+    border-bottom: 1px solid var(--renk-kenarlik-ince); /* Altına ince bir çizgi */
     box-shadow: 0 2px 5px var(--golge-hafif); /* Hafif bir gölge efekti */
     position: relative; /* Konumlandırma bağlamı oluşturur */
     z-index: 1000;      /* Header'ı diğer tüm elementlerin üzerine çıkarır */
@@ -183,7 +178,7 @@ header .container {
 .logo {
     font-size: 36px; /* Logo yazısının boyutu */
     font-weight: bold; /* Kalın yazı */
-    color: var(--kır,--renk-ana-kirmizi); /* Kırmızı bir renk */
+    color: var(--renk-ana-kirmizi); /* Kırmızı bir renk */
     text-decoration: none; /* Linkin altındaki çizgiyi kaldır */
     transition: color 0.3s ease;
 }
@@ -208,7 +203,7 @@ nav ul li {
 
 nav ul li a {
     text-decoration: none; /* Linklerin altındaki çizgiyi kaldır */
-    color: var(--met,--renk-metin-ikincil); /* Metin rengi */
+    color: var(--renk-metin-ikincil); /* Metin rengi */
     font-weight: 600; /* Biraz daha kalın yazı */
     font-size: 16px;
     padding: 5px 0; /* Tıklama alanını biraz büyütelim */
@@ -345,7 +340,7 @@ nav ul li a:focus-visible {
 /* ========================================= */
 .hakkimizda {
     padding: 30px 0; /* Bölümün üstünden ve altından boşluk */
-    background-color: var(--karann,--renk-arkaplan-acik-gri); /* Çok hafif bir gri arkaplan rengi */
+    background-color: var(--renk-arkaplan-acik-gri); /* Çok hafif bir gri arkaplan rengi */
 }
 
 .hakkimizda-icerik {
@@ -411,7 +406,7 @@ nav ul li a:focus-visible {
 /* ========================================= */
 .one-cikan-projeler {
     padding: 80px 0;
-    background-color: var(--karann,--renk-beyaz); /* Arka plan bu sefer beyaz kalsın */
+    background-color: var(--renk-beyaz); /* Arka plan bu sefer beyaz kalsın */
 }
 
 .projeler-grid {
@@ -422,7 +417,7 @@ nav ul li a:focus-visible {
 }
 
 .proje-karti {
-    background-color: var(--ayay,--renk-beyaz);
+    background-color: var(--renk-beyaz);
     border-radius: 8px; /* Kart köşelerini yuvarlat */
     box-shadow: 0 4px 15px var(--golge-hafif);
     overflow: hidden; /* Taşan kısımları (resmin köşeleri) gizle */
@@ -464,7 +459,7 @@ nav ul li a:focus-visible {
 .kart-icerik p {
     font-size: 15px;
     line-height: 1.6;
-    color: var(--met,--renk-metin-ikincil);
+    color: var(--renk-metin-ikincil);
     flex-grow: 1; /* Paragrafın mevcut alanı doldurmasını sağlar, butonları hizalar */
     margin-bottom: 20px;
 }
@@ -633,7 +628,7 @@ footer :focus-visible {
 /* 6. GENEL SAYFA AYARLARI                    */
 /* ========================================= */
 .sayfa-basligi {
-    background-color: var(--gece,--renk-arkaplan-sayfa-basligi);
+    background-color: var(--renk-arkaplan-sayfa-basligi);
     padding: 40px 0;
     text-align: center;
     border-bottom: 1px solid var(--renk-kenarlik-normal);

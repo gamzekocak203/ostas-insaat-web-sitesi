@@ -23,30 +23,30 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-    // YUKARI ÇIK BUTONU LOGIĞI
+    // YUKARI ÇIK BUTONU 
     const scrollTopBtn = document.querySelector('#scrollTopBtn');
 
     if (scrollTopBtn) {
         // 1. Pencerenin 'scroll' (kaydırma) olayını dinle
         window.addEventListener('scroll', () => {
-            // 2. Kullanıcı 400px'den fazla aşağı kaydırdıysa...
+            // 2. Kullanıcı 400px'den fazla aşağı kaydırdıysa
             if (window.scrollY > 400) {
-                // butona 'visible' class'ını ekle (görünür yap).
+                // butona 'visible' class'ını ekle 
                 scrollTopBtn.classList.add('visible');
             } else {
-                // Değilse, 'visible' class'ını kaldır (gizle).
+                // Değilse, 'visible' class'ını kaldır 
                 scrollTopBtn.classList.remove('visible');
             }
         });
 
         // 3. Butona 'click' (tıklama) olayını dinle
         scrollTopBtn.addEventListener('click', (event) => {
-            event.preventDefault(); // a etiketinin normal davranışını engelle (# hedefine gitmesin)
+            event.preventDefault(); // a etiketinin normal davranışını engelle 
             
             // 4. Sayfanın en üstüne (koordinat 0) yumuşak bir şekilde kaydır
             window.scrollTo({
                 top: 0,
-                behavior: 'smooth' // 'auto' (anında) yerine 'smooth' (yumuşak)
+                behavior: 'smooth' // anında yerine  yumuşak
             });
         });
     }
@@ -166,17 +166,17 @@ document.addEventListener('DOMContentLoaded', () => {
     // Eğer banner elementi sayfada varsa devam et
     if (cookieBanner && acceptBtn) {
         
-        // 1. Sayfa yüklendiğinde, localStorage'da onay bilgisi var mı diye kontrol et.
+        //  Sayfa yüklendiğinde, localStorage'da onay bilgisi var mı diye kontrol et.
         const consentGiven = localStorage.getItem('cookieConsent');
         
-        // 2. Eğer daha önce onay verilmemişse (!consentGiven), banner'ı göster.
+        //  Eğer daha önce onay verilmemişse , banner'ı göster.
         if (!consentGiven) {
             cookieBanner.classList.add('visible');
         }
 
         // 3. 'Kabul Et' butonuna tıklanınca ne olacağını belirle.
         acceptBtn.addEventListener('click', () => {
-            // Onay bilgisini localStorage'a kaydet. Değerin ne olduğu önemli değil, var olması yeterli.
+            // Onay bilgisini localStorage'a kaydet.
             localStorage.setItem('cookieConsent', 'true');
             
             // Banner'ı gizle.
@@ -195,14 +195,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-
+/*
 
 
      // TEMA DEĞİŞTİRİCİ (DARK MODE) MANTIĞI
     const themeToggle = document.querySelector('#theme-toggle');
     const body = document.body;
 
-    // 1. Sayfa yüklendiğinde kullanıcının kaydedilmiş tercihini kontrol et
+    // Sayfa yüklendiğinde kullanıcının kaydedilmiş tercihini kontrol et
     const savedTheme = localStorage.getItem('theme');
     if (savedTheme === 'dark') {
         body.classList.add('dark-mode');
@@ -211,11 +211,11 @@ document.addEventListener('DOMContentLoaded', () => {
         themeToggle.innerHTML = '🌙'; // Ay ikonu
     }
 
-    // 2. Düğmeye tıklandığında temayı değiştir
+    // Düğmeye tıklandığında temayı değiştir
     themeToggle.addEventListener('click', () => {
         body.classList.toggle('dark-mode');
 
-        // 3. Yeni tercihi kaydet ve ikon değiştir
+        //  Yeni tercihi kaydet ve ikon değiştir
         if (body.classList.contains('dark-mode')) {
             localStorage.setItem('theme', 'dark');
             themeToggle.innerHTML = '☀️';
@@ -226,7 +226,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
 
-
+*/
 
 
     
